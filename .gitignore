@@ -1,0 +1,21 @@
+# Terraform temp folder — downloaded providers live here
+.terraform/
+
+# Lock file — auto generated, not needed in repo
+.terraform.lock.hcl
+
+# State files — never commit these
+*.tfstate
+*.tfstate.backup
+
+# Crash logs
+crash.log
+
+# Variable files may contain secrets
+*.tfvars
+*.tfvars.json
+
+# AWS credentials — NEVER commit
+.aws/
+*.pem
+*.key
