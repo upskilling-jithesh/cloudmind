@@ -2,8 +2,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-# S3 Bucket — stores architecture docs
-
 resource "aws_s3_bucket" "infra_docs" {
   bucket = "${var.project_name}-infra-docs-${var.environment}"
 
@@ -14,7 +12,6 @@ resource "aws_s3_bucket" "infra_docs" {
   }
 }
 
-# Block all public access — never expose this bucket
 resource "aws_s3_bucket_public_access_block" "infra_docs" {
   bucket = aws_s3_bucket.infra_docs.id
 
@@ -23,4 +20,3 @@ resource "aws_s3_bucket_public_access_block" "infra_docs" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
-
