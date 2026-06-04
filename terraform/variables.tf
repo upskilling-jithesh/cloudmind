@@ -1,19 +1,17 @@
 variable "aws_region" {
-  default     = "ap-south-1"
-  description = "AWS region"
+  description = "AWS region to deploy resources"
   type        = string
+  default     = "ap-south-1"
 }
 
 variable "project_name" {
-  default     = "cloudmind"
-  description = "Project Name"
+  description = "Project name used in resource naming"
   type        = string
-
+  default     = "cloudmind"
 }
 
 variable "environment" {
-  default     = "dev"
-  description = "Environment Name"
+  description = "Deployment environment"
   type        = string
-
+  default     = "dev"
 }
